@@ -11,3 +11,6 @@ that contains the bookmark in bookmarklet.txt.
 
 Click the bookmarklet from any page to create a google task with the URL
 and page title inserted into the notes field.
+
+Notes:
+This has only been tested in Google Chrome.
