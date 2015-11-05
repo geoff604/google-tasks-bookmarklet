@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<?!= HtmlService.createHtmlOutputFromFile('Stylesheet').getContent(); ?>
+</head>
+<body>
+<div id="outer">
+<label for="tasklist">Select a task list: </label>
+<select id="tasklist">
+  <option>Loading...</option>
+</select>
+<br/>
+    <label for="task-title">Title:</label>
+    <input type="text" name="task-title" id="task-title" />
+    <label for="task-date">Date:</label>
+    <input type="text" name="task-date" id="task-date" />
+    <textarea name="task-note" id="task-note"><?= startingNote ?></textarea>
+    <form name="new-task" id="new-task"> 
+    <input type="submit" name="add" id="add-button" value="Add" />
+  </form>
+</div>
+<?!= HtmlService.createHtmlOutputFromFile('JavaScript').getContent(); ?>
+
+</body>
+</html>
