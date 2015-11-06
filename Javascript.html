@@ -113,7 +113,8 @@
     var noteTextBox = $('#task-note');
     var title = titleTextBox.val();
     var note = noteTextBox.val();
-    var date = $("#task-date").datepicker( "getDate" ).toISOString();
+    var dateObj = $("#task-date").datepicker( "getDate" );
+    var date = dateObj ? dateObj.toISOString() : undefined;
     google.script.run.withSuccessHandler(function() {
        $("#outer").html("<p>Task added.</p>");
     }).withFailureHandler(showError)
