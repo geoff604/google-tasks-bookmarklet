@@ -27,19 +27,42 @@ function doGet(e) {
 }
 
 /**
- * Returns the ID and name of every task list in the user's account.
+ * Returns the ID and name of every task list in the user's account,
+ * sorted alphabetically by task list name.
  * @return {Array.<Object>} The task list data.
  */
 function getTaskLists() {
-  var taskLists = Tasks.Tasklists.list().getItems();
-  if (!taskLists) {
-    return [];
+  
+  var list = Tasks.Tasklists.list();
+ 
+  var taskLists = [];
+  var currentItems = list.getItems();
+  while(currentItems) {
+    taskLists = taskLists.concat(currentItems);
+    if (list.nextPageToken) {
+      list = Tasks.Tasklists.list({pageToken: list.nextPageToken});
+      currentItems = list.getItems();
+    } else {
+      break;
+    }
   }
-  return taskLists.map(function(taskList) {
+  
+  taskLists = taskLists.map(function(taskList) {
     return {
       id: taskList.getId(),
       name: taskList.getTitle()
     };
+  });
+  
+  return taskLists.sort(function(a, b) {
+    if (a.name < b.name) {
+      return -1;
+    }
+    if (a.name > b.name) {
+      return 1;
+    }
+    // a must be equal to b
+    return 0;
   });
 }
 
