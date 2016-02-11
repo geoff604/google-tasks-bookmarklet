@@ -20,7 +20,8 @@ function doGet(e) {
   var t = HtmlService.createTemplateFromFile('Page')
   
   t.startingNote = e.parameter.startingNote;
-  
+  t.startingTitle = e.parameter.startingTitle;
+
   return t.evaluate()
       .setTitle('Geoff Tasks')
       .setSandboxMode(HtmlService.SandboxMode.IFRAME);
