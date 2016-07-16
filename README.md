@@ -17,7 +17,7 @@ can be edited before adding the task.
 ## Latest News
 
 July 16th 2016:
-Originally I created google-tasks-bookmarklet which was based on Google Apps Script, but it seems like Google Apps Script is no longer supported. However it seems Google Apps Script is no longer supported (see the bug here: https://code.google.com/p/google-apps-script-issues/issues/detail?id=6133 ).
+Originally I created google-tasks-bookmarklet which was based on Google Apps Script, but it seems like Google Apps Script is no longer supported. See the bug here: https://code.google.com/p/google-apps-script-issues/issues/detail?id=6133
 
 So because of this, I created a version of the google-tasks-bookmarklet which is self hosted, using PHP. This new PHP-based version is available here: https://github.com/geoff604/google-tasks-bookmarklet-php
 
