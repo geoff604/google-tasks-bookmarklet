@@ -14,6 +14,15 @@ You will also be given an opportunitiy to set a date for
 the task via a calendar picker, and the title and notes
 can be edited before adding the task.
 
+## Latest News
+
+July 16th 2016:
+Originally I created google-tasks-bookmarklet which was based on Google Apps Script, but it seems like Google Apps Script is no longer supported. However it seems Google Apps Script is no longer supported (see the bug here: https://code.google.com/p/google-apps-script-issues/issues/detail?id=6133 ).
+
+So because of this, I created a version of the google-tasks-bookmarklet which is self hosted, using PHP. This new PHP-based version is available here: https://github.com/geoff604/google-tasks-bookmarklet-php
+
+If you still want to try the old Google Apps Script version, feel free to read on...
+
 ## How to Install
 
 If you don't want to modify this script, and just want to
