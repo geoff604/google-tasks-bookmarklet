@@ -65,7 +65,7 @@ is not required for the Bookmarklet to work.
 The instructions on how to deploy the Bookmarklet's back
 end are the same as the app called simple_tasks, of which
 the instructions can be found at:
-https://github.com/google/google-apps-script-samples/tree/master/simple_tasks
+https://github.com/googlesamples/apps-script/tree/master/simpleTasks
 
 Once you have deployed the back end, to use the bookmarklet,
 create a bookmark in your browser bookmark's toolbar
